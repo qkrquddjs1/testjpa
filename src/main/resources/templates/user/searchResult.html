@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>search result</title>
+</head>
+<body>
+<h1> 성별  조회 </h1>
+<table>
+    <tr>
+        <th>유저번호</th>
+        <th>유저아이디</th>
+        <th>유저비밀번호</th>
+        <th>유저이름</th>
+        <th>유저성별</th>
+        <th>유저핸드폰번호</th>
+        <th>유저이메일</th>
+    </tr>
+    <tr th:each="user : ${userList}">
+        <td th:text="${ user.userNo }"></td>
+        <td th:text="${ user.userId }"></td>
+        <td th:text="${ user.userPwd }"></td>
+        <td th:text="${ user.userName }"></td>
+        <td th:text="${ user.Gender }"></td>
+        <td th:text="${ user.Phone }"></td>
+        <td th:text="${ user.Email }"></td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>신규 유저 등록</title>
+</head>
+<body>
+    <h1>신규 유저 등록</h1>
+<form action="/user/regist" method="post">
+    <label>유저아이디 :</label><input type="text" name="userId"><br>
+    <label>유저이름 :</label><input type="text" name="userName"><br>
+    <label>유저성별 :</label>
+    <select name="gender" id="gender">
+    </select><br>
+    <label>유저핸드폰번호 :</label><input type="text" name="phone"><br>
+
+    <label>유저 이메일  :</label><input type="email" name="email"><br>
+    <br>
+    <input type="submit" value="등록">
+</form>
+    <script>
+        fetch('/user/gender')
+            .then(res => res.json())
+            .then(data => {
+                const $gender = document.getElementById('gender');
+                console.log($gender)
+                for(let index in data){
+                    const $option = document.createElement('option');
+                    $option.value = data[index];
+                    $option.textContent = data[index];
+                    $gender.appendChild($option);
+                }
+            });
+    </script>
+</body>
+</html>

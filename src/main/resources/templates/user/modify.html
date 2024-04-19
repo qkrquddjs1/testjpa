@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>유저 정보 수정</title>
+</head>
+<body>
+    <h1> 정보 변경 </h1>
+
+    <form action="/user/modify" method="post">
+        <label>수정할유저번호 </label> <input type="number" name="userNo"> <br>
+        <label>수정할유저아이디 :</label><input type="text" name="userId"><br>
+        <label>수정할유저이름 :</label><input type="text" name="userName"><br>
+        <label>수정할유저핸드폰번호 :</label><input type="text" name="phone"><br>
+        <label>수정할유저 이메일  :</label><input type="email" name="email"><br>
+        <br>
+        <input type="submit" value="등록">
+    </form>
+</body>
+</html>
